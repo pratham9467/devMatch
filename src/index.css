@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-bg: #0B0F19;
+  --color-card-bg: rgba(255, 255, 255, 0.05);
+  --color-accent-purple: #8B5CF6;
+  --color-accent-blue: #3B82F6;
+  --font-family-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-family-mono: 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+:root {
+  --primary-bg: #0B0F19;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --accent-gradient: linear-gradient(135deg, #8B5CF6, #3B82F6);
+  --corner-radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background-color: var(--primary-bg);
+  color: white;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--corner-radius);
+}
+
+.gradient-text {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-button {
+  background: var(--accent-gradient);
+  border: none;
+  border-radius: var(--corner-radius);
+  padding: 12px 24px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.skill-tag {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
