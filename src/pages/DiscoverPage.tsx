@@ -29,7 +29,7 @@ function SwipeCard({
 }) {
   const shouldReduceMotion = useReducedMotion();
   const x = useMotionValue(0);
-  const rotate = useTransform(x, [-200, 200], [-15, 15]);
+  const rotate = useTransform(x, shouldReduceMotion ? [0, 0] : [-200, 200], shouldReduceMotion ? [0, 0] : [-15, 15]);
   const opacity = useTransform(x, [-200, -150, 0, 150, 200], [0.5, 1, 1, 1, 0.5]);
   const superLikeOpacity = useTransform(x, [0, 100], [0, 1]);
   const nopeOpacity = useTransform(x, [-100, 0], [1, 0]);
